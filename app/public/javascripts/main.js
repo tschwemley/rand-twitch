@@ -43,7 +43,7 @@ $(document).ready(function() {
         
         // Handle the actual form result
         .done(function(data) {
-            alert(data);
+            console.log(data);
             return;
             var decodedEmbed = $('<div/>').html(data.embed.code).text();
             console.log(decodedEmbed);
