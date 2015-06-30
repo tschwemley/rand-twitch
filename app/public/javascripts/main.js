@@ -26,7 +26,6 @@ $(document).ready(function() {
         } else {
             category = categories[Math.floor(categoryLength * Math.random())].text;     
         }
-        alert(category);
 
         // Get the form data
         var formData = {
