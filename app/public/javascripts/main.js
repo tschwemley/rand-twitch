@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    // Initialize multi select before data is returned.
+    $('#category-select').selectivity({
+        items: [],
+        multiple: true,
+        placeholder: 'Select games...'
+    });
+
     // Construct multi select and define global items array (default all categories list).
     var items = [];
     $.getJSON('/twitch-api/games', function(data) {
@@ -7,11 +14,7 @@ $(document).ready(function() {
             items[key] = value.game.name;
         });
 
-        $('#category-select').selectivity({
-            items: items,
-            multiple: true,
-            placeholder: 'Select games...'
-        });
+        $('#category-select').selectivity('setOptions', {items: items});
     });
 
     // Process form
