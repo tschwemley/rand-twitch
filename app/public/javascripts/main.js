@@ -42,13 +42,12 @@ $(document).ready(function() {
         })
         
         // Handle the actual form result
-        .done(function(data) {
-            console.log(data);
-            return;
-            var decodedEmbed = $('<div/>').html(data.embed.code).text();
-            console.log(decodedEmbed);
+        .done(function(stream) {
+            console.log(stream);
+            var iframe = '<iframe id="player" type="text/html" width="640" height="360" '
+                + 'src="http://www.twitch.tv/' + stream.channel.name + '/embed" frameborder="0"></iframe>';
 
-            $('#theater').hide().html(decodedEmbed);
+            $('#theater').hide().html(iframe);
             $('#theater').slideDown("slow");
         });
 
