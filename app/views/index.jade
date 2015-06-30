@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .wrapper
+    #theater
+    #form-wrapper
+      fieldset
+        form#video-form
+          #category-select
+            input#categories(type='text', placeholder='Click to choose categories')
+          input#submit(type='submit', value='Get Video')

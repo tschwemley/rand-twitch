@@ -1,0 +1,589 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+  button:hover,
+  button:focus {
+    background-color: #2c5999;
+    color: #fff; }
+  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em; }
+  label.required::after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+select[multiple=multiple],
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color;
+  width: 100%; }
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+  select[multiple=multiple]:hover,
+  textarea:hover {
+    border-color: #c4c4c4; }
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+  select[multiple=multiple]:focus,
+  textarea:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  transition: color 0.1s linear; }
+  a:active, a:focus, a:hover {
+    color: #2c5999; }
+  a:active, a:focus {
+    outline: none; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); }
+
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none; }
+  .fa-ul > li {
+    position: relative; }
+
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center; }
+  .fa-li.fa-lg {
+    left: -1.85714em; }
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.fa.pull-left {
+  margin-right: .3em; }
+.fa.pull-right {
+  margin-left: .3em; }
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8); }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none; }
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.fa-stack-1x {
+  line-height: inherit; }
+
+.fa-stack-2x {
+  font-size: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: ""; }
+
+/**
+ * All CSS that comes with Selectivity.js can be used as is, or tweaked to your heart's content :)
+ *
+ * Please realize though there is no "API contract" regarding styling of CSS classes, meaning that
+ * any customized CSS made may need to be updated without warning if you want to upgrade the
+ * Selectivity version you use. You can mitigate this problem by using your own templates instead of
+ * those defined in selectivity-templates.js, since templates will at the very least continue
+ * working across patch versions and any changes necessary to templates will be documented in the
+ * changelog.
+ */
+.selectivity-clearfix {
+  clear: both; }
+
+.selectivity-input {
+  display: inline-block;
+  width: 250px; }
+  .selectivity-input select {
+    display: none; }
+
+.selectivity-placeholder {
+  color: #999; }
+
+/**
+ * Dropdown
+ */
+.selectivity-dropdown {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15), 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 9999; }
+
+.selectivity-search-input-container {
+  border-bottom: 1px solid #eee; }
+
+.selectivity-search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%; }
+
+.selectivity-results-container {
+  max-height: 28em;
+  overflow: auto;
+  position: relative; }
+
+.selectivity-load-more,
+.selectivity-result-item {
+  cursor: pointer;
+  padding: 7px; }
+
+.selectivity-result-children .selectivity-result-item {
+  padding-left: 17px; }
+
+.selectivity-load-more.highlight,
+.selectivity-result-item.highlight {
+  background: #4484c7;
+  color: #fff; }
+
+.selectivity-result-item:first-child {
+  border-radius: 4px 4px 0 0; }
+
+.selectivity-dropdown.has-search-input .selectivity-result-item:first-child {
+  border-radius: 0; }
+
+.selectivity-result-label {
+  font-weight: bold; }
+
+.selectivity-load-more,
+.selectivity-result-item:last-child,
+.selectivity-result-children:last-child .selectivity-result-item:last-child {
+  border-radius: 0 0 4px 4px; }
+
+.selectivity-result-children .selectivity-result-item:last-child {
+  border-radius: 0; }
+
+.selectivity-error,
+.selectivity-loading,
+.selectivity-search-input-container,
+.selectivity-result-label {
+  padding: 7px; }
+
+/**
+ * Backdrop
+ */
+.selectivity-backdrop {
+  background: transparent;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.button-group {
+  display: inline-block; }
+  .button-group input {
+    display: none; }
+  .button-group label {
+    margin-bottom: 0; }
+    @media screen and (min-width: 53.75em) {
+      .button-group label {
+        float: left; } }
+    .button-group label .button-group-item {
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background: rgba(160, 179, 176, 0.25);
+      color: #a0b3b0;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 22px;
+      float: left;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease; }
+      .button-group label .button-group-item:hover {
+        background: #179b77;
+        color: #fff; }
+    .button-group label input:checked + .button-group-item {
+      background: #1ab188;
+      color: #fff; }
+
+#form-wrapper {
+  font-family: 'Titillium Web', sans-serif !important; }
+  #form-wrapper fieldset {
+    background: rgba(19, 35, 47, 0.9); }
+  #form-wrapper #video-form #category-select, #form-wrapper #video-form #submit {
+    margin-top: 20px; }
+  #form-wrapper #video-form #submit {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    background: #1ab188; }
+
+.selectivity-multiple-input-container {
+  background: #eee;
+  background: none;
+  border-radius: 2px;
+  cursor: text;
+  max-height: 10em;
+  min-height: calc(2em + 4px);
+  overflow: auto;
+  padding: 5px;
+  font-size: 22px;
+  font-family: 'Titillium Web', sans-serif;
+  border: 1px solid #a0b3b0;
+  color: #fff;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease; }
+
+.selectivity-multiple-input-container .selectivity-placeholder {
+  height: calc(2em + 4px);
+  line-height: calc(2em + 4px); }
+
+.selectivity-multiple-input,
+input[type='text'].selectivity-multiple-input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  float: left;
+  font-family: 'Titillium Web', sans-serif;
+  height: calc(2em + 4px);
+  max-width: 100%;
+  outline: 0;
+  padding: 0; }
+  .selectivity-multiple-input:focus,
+  input[type='text'].selectivity-multiple-input:focus {
+    border-color: #1ab188;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none; }
+
+.selectivity-multiple-input::-ms-clear {
+  display: none; }
+
+.selectivity-multiple-input.selectivity-width-detector {
+  position: absolute;
+  top: -10000px;
+  left: 0;
+  white-space: pre; }
+
+.selectivity-multiple-selected-item {
+  background: #4484c7;
+  background: #1ab188;
+  border-radius: 3px;
+  color: #fff;
+  cursor: default;
+  float: left;
+  line-height: 2em;
+  margin: 2px;
+  padding-right: 5px;
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap; }
+
+.selectivity-multiple-selected-item-remove {
+  color: #fff;
+  cursor: pointer;
+  padding: 5px; }
+  .selectivity-multiple-selected-item-remove:hover {
+    color: #333; }
+
+html, body {
+  font-family: 'Titillium Web', sans-serif; }
+
+body {
+  background: rgba(19, 35, 47, 0.9); }
+
+.wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#theater {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0;
+  text-align: center; }
+  #theater:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=application.css.map */

@@ -1,0 +1,30 @@
+@import 'colors';
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'base/base';
+@import 'font-awesome/font-awesome';
+@import 'selectivity/selectivity';
+@import 'video-form';
+@import '_custom-selectivity';
+
+html, body {
+    // background: $body-bg;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    background: rgba($form-bg, 0.9);
+}
+
+.wrapper {
+    @include outer-container;
+}
+
+#theater {
+    @include span-columns(12);
+    @include omega();
+
+    text-align: center;
+}

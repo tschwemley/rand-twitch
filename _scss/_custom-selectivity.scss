@@ -1,0 +1,81 @@
+.selectivity-multiple-input-container {
+    background: $selectivity-bg;
+    background: none;
+    border-radius: $selectivity-border-radius;
+    cursor: text;
+    max-height: 10em;
+    min-height: calc(2em + 4px);
+    overflow: auto;
+    // padding: $selectivity-padding;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Titillium Web', sans-serif;
+    border:1px solid $gray-light;
+    color:$white;
+    border-radius:0;
+    transition:border-color .25s ease, box-shadow .25s ease;
+}
+
+.selectivity-multiple-input-container .selectivity-placeholder {
+    height: calc(2em + 4px);
+    line-height: calc(2em + 4px);
+}
+
+.selectivity-multiple-input,
+input[type='text'].selectivity-multiple-input {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    height: calc(2em + 4px);
+    max-width: 100%;
+    outline: 0;
+    padding: 0;
+
+    &:focus {
+        border-color: $main;
+        background-color: transparent;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.selectivity-multiple-input::-ms-clear {
+    display: none;
+}
+
+.selectivity-multiple-input.selectivity-width-detector {
+    position: absolute;
+    top: -10000px;
+    left: 0;
+    white-space: pre;
+}
+
+.selectivity-multiple-selected-item {
+    background: $selectivity-multiple-selected-bg;
+    background: $main;
+    border-radius: $selectivity-multiple-selected-border-radius;
+    color: $white;
+    cursor: default;
+    float: left;
+    line-height: 2em;
+    margin: 2px;
+    padding-right: 5px;
+    position: relative;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.selectivity-multiple-selected-item-remove {
+    color: $selectivity-multiple-selected-color;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+        color: $dark-gray; 
+    }
+}

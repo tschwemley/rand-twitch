@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;AAIA,yBAAyB;EACrB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,GAAG",
+"sources": ["../../../../_scss/selectivity/submenu.sass"],
+"names": [],
+"file": "submenu.css"
+}
