@@ -15,7 +15,8 @@ html, body {
 }
 
 body {
-    background: rgba($form-bg, 0.9);
+    // background: rgba($form-bg, 0.9);
+    background: $body-bg;
 }
 
 .wrapper {
@@ -27,4 +28,17 @@ body {
     @include omega();
 
     text-align: center;
+
+    >#stream-details {
+        @include span-columns(4); 
+        color: $white;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 22px;
+        text-align: left;
+
+        >a {
+            color: $white; 
+            text-decoration: underline;
+        }
+    }
 }

@@ -60,6 +60,7 @@
 
 #form-wrapper {
     font-family: 'Titillium Web', sans-serif !important;
+    margin-top: 2%;
 
     fieldset {
         background: rgba($form-bg, 0.9);
@@ -74,6 +75,10 @@
             font-family: 'Titillium Web', sans-serif;
             font-size: 22px;
             background: $main;
+
+            &:hover {
+                background: lighten($main, 10%); 
+            }
         }
     }
 }

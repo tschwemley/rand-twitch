@@ -17,13 +17,14 @@ router.get('/games', function(req, res, next) {
 });
 
 router.post('/streams', function(req, res, next) {
-    var uri = apiBaseUri + 'streams?game=' + encodeURIComponent(req.body.category);
+    var uri = apiBaseUri + 'streams?game=' + encodeURIComponent(req.body.category) + '&limit=100';
 
     request(uri, function(error, response, body) {
         if (!error && response.statusCode == 200) {
-            var streamsJson = JSON.parse(body);
-            console.log(streamsJson);
-            res.send('nyx');
+            var streamsJson = JSON.parse(body).streams,
+                stream = streamsJson[getRandomNumber(0, streamsJson.length)];
+            
+            res.send(stream);
         }  else {
             res.send('error.'); 
         }
