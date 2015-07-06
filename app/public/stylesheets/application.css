@@ -480,7 +480,8 @@ picture {
       color: #fff; }
 
 #form-wrapper {
-  font-family: 'Titillium Web', sans-serif !important; }
+  font-family: 'Titillium Web', sans-serif !important;
+  margin-top: 2%; }
   #form-wrapper fieldset {
     background: rgba(38, 38, 38, 0.9); }
   #form-wrapper #video-form #category-select, #form-wrapper #video-form #submit {
@@ -592,9 +593,14 @@ body {
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    color: orange;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
     text-align: left; }
     #theater > #stream-details:last-child {
       margin-right: 0; }
+    #theater > #stream-details > a {
+      color: #fff;
+      text-decoration: underline; }
 
 /*# sourceMappingURL=application.css.map */

@@ -31,7 +31,14 @@ body {
 
     >#stream-details {
         @include span-columns(4); 
-        color: orange;
+        color: $white;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 22px;
         text-align: left;
+
+        >a {
+            color: $white; 
+            text-decoration: underline;
+        }
     }
 }

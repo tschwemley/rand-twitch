@@ -49,7 +49,15 @@ $(document).ready(function() {
             var iframe = '<iframe id="player" type="text/html" width="640" height="360" '
                 + 'src="http://www.twitch.tv/' + stream.channel.name + '/embed" frameborder="0"></iframe>';
 
-            $('#theater').hide().html(iframe);
+            var detailsHtml = '<div id="stream-details">' + 
+                '<strong>Game:</strong> ' + stream.game + '<br/>' +
+                '<strong>Viewers:</strong> ' + stream.viewers + '<br/>' +
+                '<strong>Streamer:</strong> <a href="'+ stream.channel.url +'">' + stream.channel.display_name + '</a><br/>' +
+                '<strong>Followers:</strong> ' + stream.channel.followers + '<br/>' +
+                '<strong>Total Views:</strong> ' + stream.channel.views + '<br/>' +
+                '</div>';
+
+            $('#theater').hide().html(detailsHtml + iframe);
             $('#theater').slideDown("slow");
         });
 
