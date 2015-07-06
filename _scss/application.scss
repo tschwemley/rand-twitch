@@ -15,7 +15,8 @@ html, body {
 }
 
 body {
-    background: rgba($form-bg, 0.9);
+    // background: rgba($form-bg, 0.9);
+    background: $body-bg;
 }
 
 .wrapper {
@@ -27,4 +28,10 @@ body {
     @include omega();
 
     text-align: center;
+
+    >#stream-details {
+        @include span-columns(4); 
+        color: orange;
+        text-align: left;
+    }
 }

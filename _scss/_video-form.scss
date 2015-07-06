@@ -74,6 +74,10 @@
             font-family: 'Titillium Web', sans-serif;
             font-size: 22px;
             background: $main;
+
+            &:hover {
+                background: lighten($main, 10%); 
+            }
         }
     }
 }
