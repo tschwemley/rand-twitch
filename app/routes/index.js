@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
+  res.render('index', {
     title: 'Random Twitch Streams',
     categories: getCategories()
   });
@@ -17,10 +17,3 @@ router.get('/video', function(req, res, next) {
 });
 
 module.exports = router;
-
-/** Read from categories file and return in JSON array **/
-function getCategories() {
-    var categoryFile = fs.readFileSync('/var/www/rand-porn/app/data/categories.json');
-
-    return JSON.parse(categoryFile)['categories'];
-}
